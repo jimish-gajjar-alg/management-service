@@ -1,13 +1,20 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const routes = require('./routes');
-require('dotenv').config();
+
+// Load environment variables from .env file 
+dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
+// Middleware to parse incoming JSON requests
 app.use(express.json());
+
+// Register routes
 app.use('/api', routes);
 
-app.listen(PORT, () => {
-  console.log(`Management-service running on http://localhost:${PORT}`);
+// Start the server
+app.listen(port, () => {
+    console.log(`Management-service running on http://localhost:${port}`);
 });

@@ -1,0 +1,3 @@
+### Get Orders from RabbitMQ
+GET http://localhost:3000/api/orders
+Accept: application/json
