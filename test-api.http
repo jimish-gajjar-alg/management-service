@@ -1,3 +1,9 @@
-### Get Orders from RabbitMQ
+### 1. Get all orders
 GET http://localhost:3000/api/orders
+Accept: application/json
+
+###
+
+### 2. Get orders after deployment (Replace `<your-azure-webapp-url>` with your Azure Web App URL)
+GET https://<your-azure-webapp-url>/api/orders
 Accept: application/json
